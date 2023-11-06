@@ -8,7 +8,7 @@ use proc_macro::TokenStream;
 /// let hash = cmd_execute!("git rev-parse --short HEAD"); // git rev-parse --short HEAD | tr -d '\n\r'
 /// let date = cmd_execute!("git log -1 --format=%cd");
 /// let latest_tag = cmd_execute!("git describe --tags --abbrev=0");
-/// let sub_version = cmd_execute!("git rev-list `git describe --tags --abbrev=0` ..HEAD --count --first-parent");
+/// let sub_version = cmd_execute!("git rev-list `git describe --tags --abbrev=0`..HEAD --count --first-parent");
 ///
 /// println!("{}", String::from_utf8_lossy(hash).trim_end());
 ///
